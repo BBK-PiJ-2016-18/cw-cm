@@ -24,4 +24,14 @@ public class ContactManagerTest {
 		assertEquals(testMaxID, 1);
 	}
 	
+	public void testsRepeatedAddID() {		
+		testManager.addID();
+		testManager.addID();
+		testManager.addID();
+		testManager.addID();
+		testManager.addID();
+		int testMaxID = (testManager.getMaxID());
+		assertEquals(testMaxID, 5);
+	}
+	
 }
