@@ -9,9 +9,7 @@ public class ContactManagerImpl implements ContactManager {
 	
 	int maxID = 0; // Maximum ID of an existing meeting on the system
 	
-	/**
-	
-    /**
+	 /**
      * Add a new meeting to be held in the future.
      * 
      * An ID is returned when the meeting is put into the system. This ID must be positive and non-zero.
@@ -21,8 +19,8 @@ public class ContactManagerImpl implements ContactManager {
      * @return the ID for the meeting
      * @throws IllegalArgumentException if the meeting is set for a time in the past, of if any contact is unknown / non-existent.
      * @throws NullPointerException if the meeting or the date are null
-    /
-    int addFutureMeeting(Set<Contact> contacts, Calendar date) {
+     */
+    public int addFutureMeeting(Set<Contact> contacts, Calendar date) {
 		
 	}
 
@@ -35,8 +33,8 @@ public class ContactManagerImpl implements ContactManager {
      * @return the meeting with the requested ID, or null if it there is none.
      * @throws IllegalStateException if there is a meeting with that ID happening 
      *         in the future
-     /
-    PastMeeting getPastMeeting(int id);
+     */
+    public PastMeeting getPastMeeting(int id);
 
     /**
      * Returns the FUTURE meeting with the requested ID, or null if there is none.
@@ -45,16 +43,16 @@ public class ContactManagerImpl implements ContactManager {
      * @return the meeting with the requested ID, or null if it there is none.
      * @throws IllegalStateException if there is a meeting with that ID happening 
      *         in the past
-    /
-    FutureMeeting getFutureMeeting(int id);
+     */
+    public FutureMeeting getFutureMeeting(int id);
 
     /**
      * Returns the meeting with the requested ID, or null if it there is none.
      *
      * @param id the ID for the meeting
      * @return the meeting with the requested ID, or null if it there is none.
-    /
-    Meeting getMeeting(int id);
+    */
+    public Meeting getMeeting(int id);
 
     /**
      * Returns the list of future meetings scheduled with this contact.
@@ -65,8 +63,8 @@ public class ContactManagerImpl implements ContactManager {
      * @return the list of future meeting(s) scheduled with this contact (maybe empty).
      * @throws IllegalArgumentException if the contact does not exist
      * @throws NullPointerException if the contact is null
-     /
-    List<Meeting> getFutureMeetingList(Contact contact);
+     */
+    public List<Meeting> getFutureMeetingList(Contact contact);
 
     /**
      * Returns the list of meetings that are scheduled for, or that took place on, the specified date
@@ -76,8 +74,8 @@ public class ContactManagerImpl implements ContactManager {
      * @param date the date
      * @return the list of meetings
      * @throws NullPointerException if the date are null
-     /
-    List<Meeting> getMeetingListOn(Calendar date);
+     */
+    public List<Meeting> getMeetingListOn(Calendar date);
 
     /**
      * Returns the list of past meetings in which this contact has participated.
@@ -88,8 +86,8 @@ public class ContactManagerImpl implements ContactManager {
      * @return the list of future meeting(s) scheduled with this contact (maybe empty).
      * @throws IllegalArgumentException if the contact does not exist
      * @throws NullPointerException if the contact is null
-     /
-    List<PastMeeting> getPastMeetingListFor(Contact contact);
+     */
+    public List<PastMeeting> getPastMeetingListFor(Contact contact);
 
     /**
      * Create a new record for a meeting that took place in the past.
@@ -100,8 +98,8 @@ public class ContactManagerImpl implements ContactManager {
      * @return the ID for the meeting
      * @throws IllegalArgumentException if the list of contacts is empty, if any of the contacts does not exist, or if the date provided is in the future
      * @throws NullPointerException if any of the arguments is null
-     /
-    int addNewPastMeeting(Set<Contact> contacts, Calendar date, String text);
+     */
+    public int addNewPastMeeting(Set<Contact> contacts, Calendar date, String text);
 
     /**
      * Add notes to a meeting.
@@ -116,8 +114,8 @@ public class ContactManagerImpl implements ContactManager {
      * @throws IllegalArgumentException if the meeting does not exist
      * @throws IllegalStateException if the meeting is set for a date in the future
      * @throws NullPointerException if the notes are null
-     /
-    PastMeeting addMeetingNotes(int id, String text);
+     */
+    public PastMeeting addMeetingNotes(int id, String text);
 
     /**
      * Create a new contact with the specified name and notes.
@@ -127,8 +125,8 @@ public class ContactManagerImpl implements ContactManager {
      * @return the ID for the new contact
      * @throws IllegalArgumentException if the name or the notes are empty strings
      * @throws NullPointerException if the name or the notes are null
-     /
-    int addNewContact(String name, String notes);
+     */
+    public int addNewContact(String name, String notes);
 
     /**
      * Returns a set with the contacts whose name contains that string.
@@ -138,8 +136,8 @@ public class ContactManagerImpl implements ContactManager {
      * @param name the string to search for
      * @return a set with the contacts whose name contains that string.
      * @throws NullPointerException if the parameter is null
-     /
-    Set<Contact> getContacts(String name);
+     */
+    public Set<Contact> getContacts(String name);
 
     /**
      * Returns a set containing the contacts that correspond to the IDs.
@@ -148,14 +146,14 @@ public class ContactManagerImpl implements ContactManager {
      * @param ids an arbitrary number of contact IDs
      * @return a set containing the contacts that correspond to the IDs.
      * @throws IllegalArgumentException if no IDs are provided or if  any of the provided IDs does not correspond to a real contact
-     /
-    Set<Contact> getContacts(int... ids);
+     */
+    public Set<Contact> getContacts(int... ids);
 
     /**
      * Save all data to disk.
      *
      * This method must be executed when the program is closed and when/if the user requests it.
-     /
-    void flush();
-	*/
+     */
+    public void flush();
+	
 }
