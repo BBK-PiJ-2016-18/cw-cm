@@ -17,7 +17,8 @@ public class ContactManagerTest {
 		int testMaxID = (testManager.getMaxID());
 		assertEquals(testMaxID, 0);
 		
-		testManager.addMaxID();
+		testManager.addID();
+		testMaxID = (testManager.getMaxID());
 		assertEquals(testMaxID, 1);
 	}
 	

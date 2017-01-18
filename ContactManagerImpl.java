@@ -13,7 +13,7 @@ public class ContactManagerImpl {
 		return this.maxID;
 	}
 	
-	public void increaseMaxID() {
+	public void addID() {
 		maxID++;
 	}
 	
