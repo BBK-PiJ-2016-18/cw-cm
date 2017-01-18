@@ -9,4 +9,5 @@ public class ContactManagerImpl implements ContactManager {
 	
 	int maxID = 0; // Maximum ID of an existing meeting on the system
 	
+	public void flush {}
 }
