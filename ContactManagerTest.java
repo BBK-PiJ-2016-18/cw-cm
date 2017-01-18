@@ -15,7 +15,10 @@ public class ContactManagerTest {
 	@Test
 	public void testsAddFutureMeeting() {
 		int testMaxID = (testManager.getMaxID());
-		assertEquals(testMaxID, 0);	
+		assertEquals(testMaxID, 0);
+		
+		testManager.addMaxID();
+		assertEquals(testMaxID, 1);
 	}
 	
 }
