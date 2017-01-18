@@ -2,7 +2,8 @@ import org.junit.*;
 import static org.junit.Assert.*;
 
 public class ContactManagerTest {
-	private ContactManager testManager;
+	
+	private ContactManagerImpl testManager;
 	
 	//setup
 	@Before
@@ -12,9 +13,9 @@ public class ContactManagerTest {
 	
 	// test
 	@Test
-	public void testsMaxID() {	
-		int testMaxID = testManager.maxID;
-		assertEquals(testMaxID, 0);		
+	public void testsAddFutureMeeting() {
+		int testMaxID = (testManager.getMaxID());
+		assertEquals(testMaxID, 0);	
 	}
 	
 }
