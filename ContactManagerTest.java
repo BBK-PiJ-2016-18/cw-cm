@@ -13,10 +13,12 @@ public class ContactManagerTest {
 	
 	// test
 	@Test
-	public void testsAddFutureMeeting() {
+	public void testsMaxID() {
 		int testMaxID = (testManager.getMaxID());
 		assertEquals(testMaxID, 0);
-		
+	}
+	
+	public void testsAddID() {		
 		testManager.addID();
 		testMaxID = (testManager.getMaxID());
 		assertEquals(testMaxID, 1);
