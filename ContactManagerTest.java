@@ -18,13 +18,15 @@ public class ContactManagerTest {
 		assertEquals(testMaxID, 0);
 	}
 	
-	public void testsAddID() {		
+	@Test
+	public void testsAddID() {
 		testManager.addID();
 		int testMaxID = (testManager.getMaxID());
 		assertEquals(testMaxID, 1);
 	}
 	
-	public void testsRepeatedAddID() {		
+	@Test
+	public void testsRepeatedAddID() {
 		testManager.addID();
 		testManager.addID();
 		testManager.addID();
