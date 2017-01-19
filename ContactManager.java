@@ -11,7 +11,7 @@ public interface ContactManager {
 	
 	int getMaxID();
 	
-	void addMaxID();
+	void addID();
 	
     /**
      * Add a new meeting to be held in the future.

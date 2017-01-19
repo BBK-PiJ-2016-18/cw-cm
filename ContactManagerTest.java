@@ -41,10 +41,8 @@ public class ContactManagerTest {
 	
 	@Test
 	public void testsAddFutureMeeting() {
-		Set<Contact> contacts = new Set<Contact>();
-		Calendar date = new Calendar();
-		Contact contact = new Contact();
-		contacts.add(contact);
+		SetMock contacts = new SetMock();
+		CalendarMock calendar = new CalendarMock();
 		testManager.addFutureMeeting(contacts, date);
 		assertEquals(testMaxID, 1);		
 	}
