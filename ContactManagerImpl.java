@@ -5,7 +5,7 @@ import java.util.Set;
 /**
  * A class to manage your contacts and meetings.
  */
-public class ContactManagerImpl {
+public class ContactManagerImpl { // Remember to add "extends" later!
 	
 	private int maxID = 0; // Maximum ID of an existing meeting on the system
 	
@@ -28,7 +28,7 @@ public class ContactManagerImpl {
      * @throws IllegalArgumentException if the meeting is set for a time in the past, of if any contact is unknown / non-existent.
      * @throws NullPointerException if the meeting or the date are null
     */
-    public int addFutureMeeting(Set<Contact> contacts, Calendar date) {
+    public int addFutureMeeting(SetMock contacts, CalendarMock date) { // Remember to change back from mock later!!!
 		this.addID();
 		return this.getmaxID;
 	}
