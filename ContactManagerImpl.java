@@ -29,7 +29,8 @@ public class ContactManagerImpl {
      * @throws NullPointerException if the meeting or the date are null
     */
     public int addFutureMeeting(Set<Contact> contacts, Calendar date) {
-		return this.getMaxID();
+		this.addID();
+		return this.getmaxID;
 	}
 
     /**
