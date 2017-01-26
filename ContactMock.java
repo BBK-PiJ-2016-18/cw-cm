@@ -13,7 +13,7 @@ public class ContactMock {    /**
      * @return the name of the contact.
      */
     String getName() {
-		return "John"
+		return "John";
 	}
 
     /**
@@ -24,7 +24,7 @@ public class ContactMock {    /**
      * @return a string with notes about the contact, maybe empty.
      */
     String getNotes() {
-		return "Here are some notes"
+		return "Here are some notes";
 	}
 
 }

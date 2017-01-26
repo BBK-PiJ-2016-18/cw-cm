@@ -30,7 +30,7 @@ public class ContactManagerImpl { // Remember to add "extends" later!
     */
     public int addFutureMeeting(SetMock contacts, CalendarMock date) { // Remember to change back from mock later!!!
 		this.addID();
-		return this.getmaxID;
+		return this.getMaxID();
 	}
 
     /**

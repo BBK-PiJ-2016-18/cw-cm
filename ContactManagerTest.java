@@ -43,7 +43,8 @@ public class ContactManagerTest {
 	public void testsAddFutureMeeting() {
 		SetMock contacts = new SetMock();
 		CalendarMock calendar = new CalendarMock();
-		testManager.addFutureMeeting(contacts, date);
+		testManager.addFutureMeeting(contacts, calendar);
+		int testMaxID = (testManager.getMaxID());
 		assertEquals(testMaxID, 1);		
 	}
 	
