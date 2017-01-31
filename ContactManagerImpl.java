@@ -28,7 +28,7 @@ public class ContactManagerImpl { // Remember to add "extends" later!
      * @throws IllegalArgumentException if the meeting is set for a time in the past, of if any contact is unknown / non-existent.
      * @throws NullPointerException if the meeting or the date are null
     */
-    public int addFutureMeeting(SetMock contacts, CalendarMock date) { // Remember to change back from mock later!!!
+    public int addFutureMeeting(SetMock contacts, CalendarMock date) throws IllegalArgumentException, NullPointerException { // Remember to change back from mock later!!!
 		this.addID();
 		return this.getMaxID();
 	}

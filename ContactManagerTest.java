@@ -22,13 +22,6 @@ public class ContactManagerTest {
 	}
 	
 	@Test
-	public void testsAddID() {
-		testManager.addID();
-		int testMaxID = (testManager.getMaxID());
-		assertEquals(testMaxID, 1);
-	}
-	
-	@Test
 	public void testsRepeatedAddID() {
 		testManager.addID();
 		testManager.addID();
@@ -40,7 +33,7 @@ public class ContactManagerTest {
 	}
 	
 	@Test
-	public void testsAddFutureMeeting() {
+	public void testsAddFutureMeetingID() {
 		SetMock contacts = new SetMock();
 		CalendarMock calendar = new CalendarMock();
 		testManager.addFutureMeeting(contacts, calendar);
@@ -52,6 +45,14 @@ public class ContactManagerTest {
 		testManager.addFutureMeeting(contacts3, calendar3);
 		int testMaxID = (testManager.getMaxID());
 		assertEquals(testMaxID, 3);
+	}
+	
+	@Test
+	public void testsAddFutureMeetingException() {
+		SetMock contacts = new SetMock();
+		testManager.addFutureMeeting(contacts, null);
+		int testMaxID = (testManager.getMaxID());
+		assertEquals(testMaxID, 1);		
 	}
 	
 }
