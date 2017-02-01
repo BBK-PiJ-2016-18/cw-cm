@@ -9,7 +9,7 @@ import java.util.Set;
 public class ContactManagerImpl { // Remember to add "extends" later!
 	
 	private int maxID = 0; // Maximum ID of an existing meeting on the system
-	
+	private GregorianCalendar currentDate = new GregorianCalendar(2017, 2, 1);
 	public int getMaxID() {
 		return this.maxID;
 	}

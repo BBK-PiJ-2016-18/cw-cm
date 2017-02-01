@@ -40,6 +40,12 @@ public class ContactManagerTest {
 		int year = date.get(Calendar.YEAR);
 		int expected = 2017;
 		assertEquals(year, expected);
+		int month = date.get(Calendar.MONTH);
+		int expectedmonth = 2;
+		assertEquals(month, expectedMonth);
+		int day = date.get(Calendar.DAY_OF_MONTH);
+		int expectedDay = 1;
+		assertEquals(day, expectedDay);
 	}
 	
 	@Test
@@ -61,4 +67,9 @@ public class ContactManagerTest {
 		int testMaxID = (testManager.getMaxID());
 		assertEquals(testMaxID, 1);		
 	}	
+	
+	@Test
+	public void testsAddFutureMeetingException() {
+		Calendar pastDate = new GregorianCalendar(2017, 1, 31);
+	}
 }
