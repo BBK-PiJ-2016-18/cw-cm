@@ -8,11 +8,12 @@ import static org.junit.Assert.*;
 public class ContactManagerTest {
 	
 	private ContactManagerImpl testManager;
+	private GregorianCalendar date;
 	
 	//setup
 	@Before
 	public void setUp() {
-		GregorianCalendar date = new GregorianCalendar(2017, 2, 1);
+		date = new GregorianCalendar(2017, 2, 1);
 		testManager = new ContactManagerImpl();
 	}
 	
@@ -34,7 +35,14 @@ public class ContactManagerTest {
 		assertEquals(testMaxID, 5);
 	}
 	
-	/*@Test
+	@Test
+	public void testsCalendar() {
+		int year = date.get(Calendar.YEAR);
+		int expected = 2017;
+		assertEquals(year, expected);
+	}
+	
+	@Test
 	public void testsAddFutureMeetingID() {
 		SetMock contacts = new SetMock();
 		testManager.addFutureMeeting(contacts, date);
@@ -44,7 +52,7 @@ public class ContactManagerTest {
 		testManager.addFutureMeeting(contacts3, date);
 		int testMaxID = (testManager.getMaxID());
 		assertEquals(testMaxID, 3);
-	}*/
+	}
 	
 	@Test
 	public void testsAddFutureMeetingException() {
