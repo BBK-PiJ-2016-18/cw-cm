@@ -53,6 +53,5 @@ public class ContactManagerTest {
 		testManager.addFutureMeeting(contacts, null);
 		int testMaxID = (testManager.getMaxID());
 		assertEquals(testMaxID, 1);		
-	}
-	
+	}	
 }
