@@ -6,7 +6,7 @@ import java.util.Set;
 /**
  * A class to manage your contacts and meetings.
  */
-public class ContactManagerImpl { // Remember to add "extends" later!
+public class ContactManagerImpl { // Remember to add "implements" later!
 	
 	private int maxID = 0; // Maximum ID of an existing meeting on the system
 	private GregorianCalendar currentDate = new GregorianCalendar(2017, 2, 1);

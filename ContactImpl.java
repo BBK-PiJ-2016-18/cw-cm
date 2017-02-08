@@ -3,7 +3,7 @@
  *
  * Contacts have an ID (unique, a non-zero positive integer),  a name (not necessarily unique), and notes that the user  may want to save about them.
  */
-public class ContactImpl {
+public class ContactImpl implements Contact {
 	
 	private int id;
 	private String name;
@@ -31,7 +31,7 @@ public class ContactImpl {
      *
      * @return the ID of the contact.
      */
-    int getId() {
+    public int getId() {
 		return this.id;
 	}
 
@@ -40,7 +40,7 @@ public class ContactImpl {
      *
      * @return the name of the contact.
      */
-    String getName() {
+    public String getName() {
 		return this.name;
 	}
 
@@ -51,7 +51,7 @@ public class ContactImpl {
      *
      * @return a string with notes about the contact, maybe empty.
      */
-    String getNotes() {
+    public String getNotes() {
 		return this.notes;
 	}
 
@@ -60,7 +60,7 @@ public class ContactImpl {
      *
      * @param note the notes to be added
      */
-    void addNotes(String note) {
+    public void addNotes(String note) {
 		this.notes = notes + note;
 	}
 }

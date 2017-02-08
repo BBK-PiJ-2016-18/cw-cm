@@ -2,7 +2,9 @@ import org.junit.*;
 import static org.junit.Assert.*;
 
 public class ContactTest {
-	//setup
+	// setup
+	
+	//test
 	@Test
 	public void testsConstructor() {
 		ContactImpl testContact = new ContactImpl(12, "Joe Bloggs", "He's just a test");
