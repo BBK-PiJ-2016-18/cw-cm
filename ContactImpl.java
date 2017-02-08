@@ -3,11 +3,21 @@
  *
  * Contacts have an ID (unique, a non-zero positive integer),  a name (not necessarily unique), and notes that the user  may want to save about them.
  */
-public interface Contact {
+public class ContactImpl {
 	
 	private int id;
 	private String name;
 	private String notes;
+	
+	/**
+	Constructor with all three parameters
+	*/
+	
+	public ContactImpl(int id, String name, String notes) {
+		this.id = id;
+		this.name = name;
+		this.notes = notes;
+	}
 	
     /**
      * Returns the ID of the contact.

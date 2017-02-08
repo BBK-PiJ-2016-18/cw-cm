@@ -1,9 +1,9 @@
+import org.junit.*;
+import static org.junit.Assert.*;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.List;
 import java.util.Set;
-import org.junit.*;
-import static org.junit.Assert.*;
 
 public class ContactManagerTest {
 	
@@ -41,7 +41,7 @@ public class ContactManagerTest {
 		int expected = 2017;
 		assertEquals(year, expected);
 		int month = date.get(Calendar.MONTH);
-		int expectedmonth = 2;
+		int expectedMonth = 2;
 		assertEquals(month, expectedMonth);
 		int day = date.get(Calendar.DAY_OF_MONTH);
 		int expectedDay = 1;
@@ -61,7 +61,7 @@ public class ContactManagerTest {
 	}
 	
 	@Test
-	public void testsAddFutureMeetingException() {
+	public void testsAddFutureMeetingNullPointerException() {
 		SetMock contacts = new SetMock();
 		testManager.addFutureMeeting(contacts, null);
 		int testMaxID = (testManager.getMaxID());
@@ -69,7 +69,7 @@ public class ContactManagerTest {
 	}	
 	
 	@Test
-	public void testsAddFutureMeetingException() {
+	public void testsAddFutureMeetingIllegalArgumentException() {
 		Calendar pastDate = new GregorianCalendar(2017, 1, 31);
 	}
 }
