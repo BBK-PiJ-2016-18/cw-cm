@@ -12,11 +12,18 @@ public class ContactImpl {
 	/**
 	Constructor with all three parameters
 	*/
-	
 	public ContactImpl(int id, String name, String notes) {
 		this.id = id;
 		this.name = name;
 		this.notes = notes;
+	}
+	
+	/**
+	Constructor with two parameters
+	*/
+	public ContactImpl(int id, String name) {
+		this.id = id;
+		this.name = name;
 	}
 	
     /**
@@ -53,5 +60,7 @@ public class ContactImpl {
      *
      * @param note the notes to be added
      */
-    //void addNotes(String note);
+    void addNotes(String note) {
+		this.notes = notes + note;
+	}
 }
