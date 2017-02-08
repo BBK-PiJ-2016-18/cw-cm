@@ -2,6 +2,7 @@ import org.junit.*;
 import static org.junit.Assert.*;
 
 public class ContactTest {
+	
 	private Contact contact;
 	
 	// setup
@@ -25,6 +26,7 @@ public class ContactTest {
 	
 	@Test
 	public void testsGetter() {
+		Contact contact = new ContactImpl(33, "John Smith", "some notes");
 		int id = contact.getId();
 		assertEquals(id, 33);
 		String name = contact.getName();
