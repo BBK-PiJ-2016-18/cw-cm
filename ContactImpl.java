@@ -23,7 +23,9 @@ public interface Contact {
      *
      * @return the name of the contact.
      */
-    String getName();
+    String getName() {
+		return this.name;
+	}
 
     /**
      * Returns our notes about the contact, if any.
@@ -32,7 +34,9 @@ public interface Contact {
      *
      * @return a string with notes about the contact, maybe empty.
      */
-    String getNotes();
+    String getNotes() {
+		return this.notes;
+	}
 
     /**
      * Add notes about the contact.
