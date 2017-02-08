@@ -25,7 +25,7 @@ public class ContactImpl {
      * @return the ID of the contact.
      */
     int getId() {
-		return this.ID;
+		return this.id;
 	}
 
     /**
@@ -53,5 +53,5 @@ public class ContactImpl {
      *
      * @param note the notes to be added
      */
-    void addNotes(String note);
+    //void addNotes(String note);
 }
