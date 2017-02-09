@@ -5,7 +5,7 @@ import java.util.Set;
  *
  * Meetings have unique IDs, scheduled date and a list of participating contacts
  */
-public abstract class MeetingImpl /*implements Meeting*/ { // uncomments when Set<Contact added
+public abstract class MeetingImpl /*implements Meeting*/ { // uncomments when Set<Contact> added
 	private int id;
 	private GregorianCalendar date;
 	private SetMock contacts; // remember to change back to Set<Contact> later!
