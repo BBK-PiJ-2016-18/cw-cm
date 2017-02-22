@@ -3,20 +3,13 @@
  *
  * It includes your notes about what happened and what was agreed.
  */
-public class PastMeeting implements Meeting {
-	
-	private String notes;
-	
-	public 
-	
+public interface PastMeeting extends Meeting {
     /**
      * Returns the notes from the meeting.
      *
      * If there are no notes, the empty string is returned.
      *
-     * @return the notes from the meeting.	
+     * @return the notes from the meeting.
      */
-    String getNotes() {
-		return this.notes;
-	}
+    String getNotes();
 }
