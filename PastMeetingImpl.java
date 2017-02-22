@@ -31,4 +31,8 @@ public class PastMeetingImpl /*implements PastMeeting*/ {
 		}
 		return this.notes;
 	}
+	
+	public GregorianCalendar getDate() {
+		return this.date;
+	}	
 }

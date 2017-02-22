@@ -18,5 +18,7 @@ public class PastMeetingTest {
 		String notes = "Some notes";
 		SetMock contacts = new SetMock();
 		PastMeetingImpl pastMeeting = new PastMeetingImpl(55, date, contacts, notes);
+		GregorianCalendar expectedDate = pastMeeting.getDate();
+		assertEquals(date, expectedDate);
 	}
 }
