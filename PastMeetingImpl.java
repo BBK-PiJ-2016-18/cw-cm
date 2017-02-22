@@ -5,11 +5,11 @@ import java.util.GregorianCalendar;
  *
  * It includes your notes about what happened and what was agreed.
  */
-public class PastMeetingImpl extends MeetingImpl {
+public class PastMeetingImpl /*implements PastMeeting*/ {
 	private int id;
-	private GregorianCalendar dates;
+	private GregorianCalendar date;
 	private SetMock contacts;
-	private String notes;
+	private String notes;	
 	
 	public PastMeetingImpl(int id, GregorianCalendar date, SetMock contacts, String notes) {
 		this.id = id;
@@ -25,7 +25,10 @@ public class PastMeetingImpl extends MeetingImpl {
      *
      * @return the notes from the meeting.	
      */
-    String getNotes() {
+    public String getNotes() {
+		if (notes == null) {
+			return "";
+		}
 		return this.notes;
 	}
 }
