@@ -34,5 +34,9 @@ public class PastMeetingImpl /*implements PastMeeting*/ {
 	
 	public GregorianCalendar getDate() {
 		return this.date;
-	}	
+	}
+	
+	public int getID() {
+		return this.id;
+	}
 }

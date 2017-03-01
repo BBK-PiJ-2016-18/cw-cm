@@ -43,7 +43,7 @@ public class ContactManagerImpl { // Remember to add "implements" later!
      * @return the meeting with the requested ID, or null if it there is none.
      * @throws IllegalStateException if there is a meeting with that ID happening in the future
      */
-    public PastMeeting getPastMeeting(int id) throws IllegalStateException {
+   /** public PastMeeting getPastMeeting(int id) throws IllegalStateException {
 		
 	}
 
