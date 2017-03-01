@@ -5,12 +5,12 @@ import java.util.Set;
  *
  * Meetings have unique IDs, scheduled date and a list of participating contacts
  */
-public abstract class MeetingImpl /*implements Meeting*/ { // uncomments when Set<Contact> added
+public abstract class MeetingImpl implements Meeting { 
 	private int id;
 	private GregorianCalendar date;
-	private SetMock contacts; // remember to change back to Set<Contact> later!
+	private Set<Contact> contacts; 
 	
-	public MeetingImpl(int id, GregorianCalendar date, SetMock contacts) { // remember to change back to Set<Contact> later!
+	public MeetingImpl(int id, GregorianCalendar date, Set<Contact> contacts) { 
 		this.id = id;
 		this.date = date;
 		this.contacts = contacts;
@@ -43,7 +43,7 @@ public abstract class MeetingImpl /*implements Meeting*/ { // uncomments when Se
      *
      * @return the details of people that attended the meeting.
      */
-    public SetMock getContacts() { // remember to change back to Set<Contact> later!
+    public Set<Contact> getContacts() { // remember to change back to Set<Contact> later!
 		return this.contacts;
 	}
 }
