@@ -50,11 +50,11 @@ public class ContactManagerTest {
 	
 	@Test
 	public void testsAddFutureMeetingID() {
-		SetMock contacts = new SetMock();
+		Set<Contact> contacts = new Set<Contact>();
 		testManager.addFutureMeeting(contacts, date);
-		SetMock contacts2 = new SetMock();
+		Set<Contact> contacts2 = new Set<Contact>();
 		testManager.addFutureMeeting(contacts2, date);
-		SetMock contacts3 = new SetMock();
+		Set<Contact> contacts3 = new Set<Contact>();
 		testManager.addFutureMeeting(contacts3, date);
 		int testMaxID = (testManager.getMaxID());
 		assertEquals(testMaxID, 3);
@@ -62,7 +62,7 @@ public class ContactManagerTest {
 	
 	@Test
 	public void testsAddFutureMeetingNullPointerException() {
-		SetMock contacts = new SetMock();
+		Set<Contact> contacts = new Set<Contact>();
 		testManager.addFutureMeeting(contacts, null);
 		int testMaxID = (testManager.getMaxID());
 		assertEquals(testMaxID, 1);		
