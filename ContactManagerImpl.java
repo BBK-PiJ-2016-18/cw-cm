@@ -1,7 +1,7 @@
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.List;
-import java.util.Set;
+import java.util.AbstractSet;
 
 /**
  * A class to manage your contacts and meetings.
@@ -9,7 +9,9 @@ import java.util.Set;
 public class ContactManagerImpl { // Remember to add "implements" later!
 	
 	private int maxID = 0; // Maximum ID of an existing meeting on the system
+	
 	private GregorianCalendar currentDate = new GregorianCalendar(2017, 2, 1);
+	
 	public int getMaxID() {
 		return this.maxID;
 	}
@@ -17,6 +19,8 @@ public class ContactManagerImpl { // Remember to add "implements" later!
 	public void addID() {
 		maxID++;
 	}
+	
+	private AbstractSet<Contact> contacts;
 	
 	/**
      * Add a new meeting to be held in the future.
@@ -29,8 +33,9 @@ public class ContactManagerImpl { // Remember to add "implements" later!
      * @throws IllegalArgumentException if the meeting is set for a time in the past, of if any contact is unknown / non-existent.
      * @throws NullPointerException if the meeting or the date are null
     */
-    public int addFutureMeeting(Set<Contact> contacts, GregorianCalendar date) throws IllegalArgumentException, NullPointerException { // Remember to change back from mock later!!!
+    public int addFutureMeeting(AbstractSet<Contact> newContact, GregorianCalendar date) throws IllegalArgumentException, NullPointerException { // Remember to change back from mock later!!!
 		this.addID();
+		contacts.add(newContact);
 		return this.getMaxID();
 	}
 
@@ -110,7 +115,7 @@ public class ContactManagerImpl { // Remember to add "implements" later!
      * @throws IllegalArgumentException if the list of contacts is empty, if any of the contacts does not exist, or if the date provided is in the future
      * @throws NullPointerException if any of the arguments is null
      */
-    public int addNewPastMeeting(Set<Contact> contacts, Calendar date, String text) {
+    public int addNewPastMeeting(AbstractSet<Contact> contacts, Calendar date, String text) {
 		return 0;
 	}
 
@@ -151,7 +156,11 @@ public class ContactManagerImpl { // Remember to add "implements" later!
      * @return a set with the contacts whose name contains that string.
      * @throws NullPointerException if the parameter is null
      */
-    /**public Set<Contact> getContacts(String name) {}
+    public AbstractSet<Contact> getContacts(String name) {
+		if (String == "") {
+			return this.contacts;
+		} else return contacts.containsAll(name);
+	}
 
     /**
      * Returns a set containing the contacts that correspond to the IDs.
@@ -161,7 +170,7 @@ public class ContactManagerImpl { // Remember to add "implements" later!
      * @return a set containing the contacts that correspond to the IDs.
      * @throws IllegalArgumentException if no IDs are provided or if  any of the provided IDs does not correspond to a real contact
      */
-    /**public Set<Contact> getContacts(int... ids) {}
+    /**public AbstractSet<Contact> getContacts(int... ids) {}
 
     /**
      * Save all data to disk.
